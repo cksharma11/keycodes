@@ -1,0 +1,36 @@
+.keycode {
+  height: 70vh;
+  width: 99vw;
+  border: 1px solid black;
+  font-size: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event {
+  height: 130px;
+  width: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: 'Montserrat', 'sans-serif';
+  color: #424242;
+}
+
+.view {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #f2f4f8;
+  font-family: 'Montserrat', 'sans-serif';
+  color: #424242;
+}
+
+.events {
+  display: flex;
+  justify-content: space-between;
+}
+
