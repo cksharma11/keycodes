@@ -3,7 +3,7 @@
 
 (enable-console-print!)
 
-(defonce current-key-code (reagent/atom {:which    "press any key to know"
+(defonce current-key-code (reagent/atom {:which    "-1"
 																				 :key      ""
 																				 :location ""
 																				 :meta-key ""}))
@@ -17,11 +17,14 @@
 	 [:div {:class "event"} (:location @current-key-code)]
 	 [:div {:class "event"} (str (:meta-key @current-key-code))]])
 
+(defn reset-state [event]
+	(reset! current-key-code {:which    (.-which event)
+														:key      (.-key event)
+														:location (.-location event)
+														:meta-key (.-metaKey event)}))
+
 (defn view []
-	[:div {:class "view" :tabindex 1 :on-key-down #(reset! current-key-code {:which    (.-which %)
-																																					 :key      (.-key %)
-																																					 :location (.-location %)
-																																					 :meta-key (.-metaKey %)})}
+	[:div {:class "view" :tabindex 1 :on-key-down reset-state}
 	 [keycode]
 	 [events]])
 
