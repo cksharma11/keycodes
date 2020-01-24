@@ -11,11 +11,16 @@
 (defn keycode []
 	[:div {:class "keycode"} (:which @current-key-code)])
 
+(defn event [name value]
+	[:div {:class "event-wrapper"}
+	 [:div {:class "event-name"} name]
+	 [:div {:class "event-value"} value]])
+
 (defn events []
 	[:div {:class "events"}
-	 [:div {:class "event"} (:key @current-key-code)]
-	 [:div {:class "event"} (:location @current-key-code)]
-	 [:div {:class "event"} (str (:meta-key @current-key-code))]])
+	 [event "KEYCODE" (:key @current-key-code)]
+	 [event "LOCATION" (:location @current-key-code)]
+	 [event "META" (str (:meta-key @current-key-code))]])
 
 (defn reset-state [event]
 	(reset! current-key-code {:which    (.-which event)

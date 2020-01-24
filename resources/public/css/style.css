@@ -1,5 +1,6 @@
 html {
   background: #f2f4f8;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .keycode {
@@ -11,22 +12,24 @@ html {
   align-items: center;
 }
 
-.event {
+.event-wrapper {
   height: 130px;
   width: 300px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 30px;
   font-family: 'Montserrat', 'sans-serif';
   color: #424242;
+  border: 1px solid black;
+  border-radius: 3px;
 }
 
 .view {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-family: 'Montserrat', 'sans-serif';
   color: #424242;
 }
 
@@ -36,6 +39,14 @@ html {
 
 .events {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
+.event-name {
+  border-bottom: 1px solid black;
+  font-size: 20px;
+}
+
+.event-value {
+  font-family: 'Open Sans', sans-serif;;
+}
