@@ -1,0 +1,52 @@
+html {
+  background: #f2f4f8;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.keycode {
+  height: 70vh;
+  width: 99vw;
+  font-size: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-wrapper {
+  height: 130px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: 'Montserrat', 'sans-serif';
+  color: #424242;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.view {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #424242;
+}
+
+.view:focus {
+  outline: none
+}
+
+.events {
+  display: flex;
+  justify-content: space-around;
+}
+
+.event-name {
+  border-bottom: 1px solid black;
+  font-size: 20px;
+}
+
+.event-value {
+  font-family: 'Open Sans', sans-serif;;
+}
